@@ -9,7 +9,7 @@ int main() {
     // Main menu
     int key;
     while (1) {
-        printf("\nChoose an option:\n");
+        printf("Choose an option:\n");
         printf("\t1. Happy Face\n");
         printf("\t2. Balanced Number\n");
         printf("\t3. Generous Number\n");
@@ -148,10 +148,10 @@ int main() {
                 int reversedNumber = 0;
                 const int TEN = 10;
                 printf("Enter a number:\n");
-                scanf(" %d", &number);
+                scanf("%d", &number);
                 while (number < 0) {
                     printf("Only positive number is allowed, please try again:\n");
-                    scanf(" %d", &number);
+                    scanf("%d", &number);
                 }
                 newNumber = number;
                 int i = 2;
@@ -217,6 +217,7 @@ int main() {
                         }
                     }
                 }
+                printf("\n");
                 break;
             }
             case 6: {
