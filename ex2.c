@@ -22,6 +22,7 @@ int main() {
             printf("This option is not available, please try again.\n");
         }
         if (key == 7) {
+            printf("Thank you for your journey through Numeria!\n");
             break;
         }
 
