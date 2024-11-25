@@ -21,6 +21,9 @@ int main() {
         if (key < 1 || key > 7) {
             printf("This option is not available, please try again.\n");
         }
+        if (key == 7) {
+            break;
+        }
 
         switch (key) {
             case 1: {
@@ -241,19 +244,19 @@ int main() {
                 }
                 printf("Enter maximum number for the festival:\n");
                 scanf(" %d", &maxNumber);
-                if (maxNumber < 0) {
+                if (maxNumber <= 0) {
                     printf("Only positive maximum number is allowed, please try again:\n");
                     scanf(" %d", &maxNumber);
                 }
                 for (int i = 1; i <= maxNumber; i++) {
                     if (i % smile != 0 && i % cheer != 0) {
-                        printf("%d\n", i);
+                        printf("%d \n",i);
                     }
                     if (i % smile == 0 && i % cheer != 0) {
-                        printf("Smile\n!");
+                        printf("Smile!\n");
                     }
                     if (i % smile != 0 && i % cheer == 0) {
-                        printf("Cheer\n!");
+                        printf("Cheer!\n");
                     }
                     if (i % smile == 0 && i % cheer == 0) {
                         printf("Festival!\n");
