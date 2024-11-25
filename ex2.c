@@ -91,15 +91,18 @@ int main() {
 
                 // Input number
                 printf("Enter a number:\n");
+                scanf("%*[^\n]");  // Clear the input buffer
+                scanf("%*c");
                 scanf(" %d", &number);
-                realNum = number;
 
                 // Ensure the number is positive
                 while (number <= 0) {
                     printf("Only positive number is allowed, please try again:\n");
                     scanf(" %d", &number);
                 }
-
+                scanf("%*[^\n]");  // Clear the input buffer
+                scanf("%*c");
+                realNum = number;
                 // Determine the number of digits
                 while (number / TEN != 0) {
                     number = number / TEN;
