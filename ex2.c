@@ -213,8 +213,6 @@ int main() {
                 }
 
                 newNumber = number;
-                printf("%d\n", newNumber);
-                printf("%d\n", number);
 
                 // Check if number is prime
                 int i = 2;
@@ -236,7 +234,7 @@ int main() {
                     int z = 2;
                     for (; z < reversedNumber; z++) {
                         if (reversedNumber % z == 0) {
-                            printf("The circle remains incomplete\n");
+                            printf("The circle remains incomplete.\n");
                             break;
                         }
                     }
