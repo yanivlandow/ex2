@@ -162,10 +162,12 @@ int main() {
                     scanf("%d", &number);
                 }
                 newNumber = number;
+                printf("%d\n", newNumber);
+                printf("%d\n", number);
                 int i = 2;
                 for (; i < number; i++) {
                     if (number % i == 0) {
-                        printf("The circle remains incomplete\n");
+                        printf("The circle remains incomplete.\n");
                         break;
                     }
                 }
