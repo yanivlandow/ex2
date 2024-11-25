@@ -17,7 +17,7 @@ int main() {
         printf("\t5. Happy Numbers\n");
         printf("\t6. Festival Of Laughter\n");
         printf("\t7. Exit\n");
-        scanf("%d", &key);
+        scanf("%d",&key);
         if (key < 1 || key > 7) {
             printf("This option is not available, please try again.\n");
         }
@@ -67,6 +67,10 @@ int main() {
                 printf("Enter a number:\n");
                 scanf(" %d", &number);
                 realNum = number;
+                while (number <= 0) {
+                    printf("Only positive number is allowed, please try again:\n");
+                    scanf(" %d", &number);
+                }
                 while (number / TEN != 0) {
                     number = number / TEN;
                     count++;
@@ -119,7 +123,7 @@ int main() {
                 scanf(" %d", &number);
                 realNumber = number;
                 rightSum = realNumber % TEN;
-                while (number < 0) {
+                while (number <= 0) {
                     printf("Only positive number is allowed, please try again:\n");
                     scanf(" %d", &number);
                 }
@@ -149,7 +153,7 @@ int main() {
                 const int TEN = 10;
                 printf("Enter a number:\n");
                 scanf("%d", &number);
-                while (number < 0) {
+                while (number <= 0) {
                     printf("Only positive number is allowed, please try again:\n");
                     scanf("%d", &number);
                 }
@@ -188,8 +192,8 @@ int main() {
                 int power = 0;
                 const int TEN = 10;
                 printf("Enter a number:\n");
-                scanf(" %d", &number);
-                while (number < 0) {
+                scanf("%d", &number);
+                while (number <= 0) {
                     printf("Only positive number is allowed, please try again:\n");
                     scanf(" %d", &number);
                 }
@@ -205,7 +209,7 @@ int main() {
                         printf(" %d", loop);
                         loop += 1;
                         temp = loop;
-                        power = 0;
+                        power =0;
                     } else {
                         if (power == 4) {
                             loop += 1;
@@ -231,7 +235,7 @@ int main() {
                     if (x == 2 && cheer > 0 && smile > 0 && smile != cheer) {
                         break;
                     }
-                    printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:");
+                    printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:\n");
                     scanf("%*[^\n]");
                     scanf("%*c");
                 }
