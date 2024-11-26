@@ -43,6 +43,8 @@ int main() {
                 // Input symbols for face features
                 printf("Enter symbols for the eyes, nose, and mouth:\n");
                 scanf(" %c %c %c", &eyes, &nose, &mouth);
+                scanf("%*[^\n]");  // Clear the input buffer
+                scanf("%*c");
 
                 // Input face size
                 printf("Enter face size:\n");
@@ -154,47 +156,30 @@ int main() {
 
             case 3: {
                 // Case for "Generous Number"
-                int number = 0, count = 1, rightSum, realNumber, leftSum;
-                int totalSum = 0;
+                int number ;
+                int sum =0;
                 const int TEN = 10;
 
                 // Input number
                 printf("Enter a number:\n");
                 scanf(" %d", &number);
-                realNumber = number;
-                rightSum = realNumber % TEN;
 
                 // Ensure the number is positive
                 while (number <= 0) {
                     printf("Only positive number is allowed, please try again:\n");
                     scanf(" %d", &number);
                 }
-
-                // Check if the number is a multi-digit number
-                if (number / TEN == 0) {
-                    printf("This number does not share.\n");
-                    break;
+                //i check if the number divided all the number until thr number and then sum all of it
+                for (int i = 1; i < number; i++) {
+                    if (number % i == 0) {
+                        sum+=i;
+                    }
                 }
-
-                // Calculate the number of digits in the number
-                while (number / TEN != 0) {
-                    number = number / TEN;
-                    count++;
-                }
-
-                // Calculate total sum of digits
-                for (int i = 0; i < count; i++) {
-                    totalSum = totalSum + realNumber % TEN;
-                    realNumber = realNumber / TEN;
-                }
-
-                leftSum = totalSum - rightSum;
-
-                // Check generosity condition
-                if (leftSum >= rightSum) {
-                    printf("This number does not share.\n");
-                } else {
+                //if thr sum is bigger it generous if not it not share
+                if (sum > number) {
                     printf("This number is generous!\n");
+                }else {
+                    printf("This number does not share.\n");
                 }
                 break;
             }
