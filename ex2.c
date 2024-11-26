@@ -158,7 +158,6 @@ int main() {
                 // Case for "Generous Number"
                 int number ;
                 int sum =0;
-                const int TEN = 10;
 
                 // Input number
                 printf("Enter a number:\n");
