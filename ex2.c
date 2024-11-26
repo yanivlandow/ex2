@@ -7,8 +7,9 @@ Assignment: ex2
 
 int main() {
     // Main menu
-    int key;  // Variable to store user's choice
+    int key;// Variable to store user's choice
     while (1) {
+        const int TEN=10;
         // Displaying the menu
         printf("Choose an option:\n");
         printf("\t1. Happy Face\n");
@@ -89,7 +90,6 @@ int main() {
                 // Case for "Balanced Number"
                 int number, realNum;
                 int sumRight = 0, count = 1, sumLeft = 0, totalSum = 0;
-                const int TEN = 10;
 
                 // Input number
                 printf("Enter a number:\n");
@@ -187,7 +187,6 @@ int main() {
                 // Case for "Circle Of Joy"
                 int number, newNumber, rememberNumber;
                 int reversedNumber = 0;
-                const int TEN = 10;
 
                 // Input number
                 printf("Enter a number:\n");
@@ -236,7 +235,6 @@ int main() {
                 // Case for "Happy Numbers"
                 int number, newNumber, temp;
                 int loop = 1, power = 0;
-                const int TEN = 10;
 
                 // Input number
                 printf("Enter a number:\n");
